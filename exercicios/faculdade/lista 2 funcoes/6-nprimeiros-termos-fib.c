@@ -16,23 +16,25 @@ int main()
     printf("Digite o numero de termos a serem impressos: ");
     scanf("%d", &numeroDeTermos);
 
-    fibo(numeroDeTermos);
-
+    for (int i = 1; i <= numeroDeTermos; i++)
+    {
+        printf("Iteracao: %d valor: %d\n", i, fibo(i));
+    }
+    
 
     return 0;
 }
 
 int fibo(int n){
-    int numeroAnterior = 0;
-    int numeroAtual = 1;
+    int anterior = 0;
+    int atual = 1;
 
     for (int i = 0; i < n; i++)
     {
-        int controle = numeroAtual;
-        printf("Iteracao: %d valor: %d\n", i + 1, numeroAtual);
-
-        numeroAtual += numeroAnterior;
-
-        numeroAnterior = controle;
+        int proximo = anterior + atual;
+        anterior = atual;
+        atual = proximo;
     }
+
+    return anterior;
 }
