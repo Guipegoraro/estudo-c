@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+int fatorial(int valor);
 
 int main()
 {
@@ -14,7 +15,7 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         termo = fatorial(i);
-        resultado += termo;
+        resultado += 1 / termo;
 
         printf("Serie: %d termo: %f\n", i, termo);
     }
@@ -22,4 +23,13 @@ int main()
     printf("Resultado final: %.2f", resultado);
 
     return 0;
+}
+
+int fatorial(int valor){
+
+    if(valor == 0 || valor == 1){
+        return valor;
+    }
+
+    return valor * fatorial(valor - 1);
 }

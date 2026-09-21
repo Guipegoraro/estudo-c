@@ -13,7 +13,7 @@ int main()
 {
     char *digito;
     bool ehDigito0A9;
-    int digitoInd;
+    int digitoInt;
     char *pointerFim;
 
 

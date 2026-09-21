@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-
-int main()
+// 3) Implemente as duas formas para calcular o valor aproximado de π, conforme as 
+// séries a seguir. O número de termos é definido pelo usuário. 
+ 
+// a) Série de Gregory-Leibniz: int main()
+main()
 {
     int n;
 

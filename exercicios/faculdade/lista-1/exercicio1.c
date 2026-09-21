@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+// Faça um algoritmo que mostre na tela os k termos da série harmônica e, ao final, 
+// mostre o somatório dos termos. O número de termos da série é definido pelo 
+// usuário.
 int main()
 {
     int k;

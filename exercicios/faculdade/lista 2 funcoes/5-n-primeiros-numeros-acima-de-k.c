@@ -1,46 +1,48 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-// 5) Faça um programa que, dados k e n, mostre na tela os n primeiros números primos acima 
+// 5) Faça um programa que, dados k e n, mostre na tela os n primeiros números primos acima
 // de k. A verificação do número (se é ou não é primo) deve ser feita através de uma função.
 
-int primos_acima_de_k(int k, int n);
+bool ehNumeroPrimo(int valor);
 
 int main()
 {
-    int valor1;
-    int valor2;
-    int total;
+    int k;
+    int n;
 
-    printf("Entre o valor 1: ");
-    scanf("%d", &valor1);
-    printf("Entre valor 2 : ");
-    scanf("%d", &valor2);
-
-    total = soma_impares(valor1, valor2);
-
-    printf("total: %d", total);
+    printf("Entre K: ");
+    scanf("%d", &k);
+    printf("Entre N: ");
+    scanf("%d", &n);
+    int controle = k + 1;
+    for (int i = 0; i < n;)
+    {
+        if (ehNumeroPrimo(controle))
+        {
+            printf("primo: %d\n", controle);
+            i++;
+        }
+        controle++;
+    }
 
     return 0;
 }
 
-int soma_impares(int valor1, int valor2){
-    int valorMaior = valor1;
-    int valorMenor = valor2;
-
-    if (valorMaior < valor2){
-        valorMaior = valor2;
-        valorMenor = valor1;
-    }
-
-    int total = 0;
-    for (int i = valorMenor + 1; i < valorMaior; i++)
+bool ehNumeroPrimo(int valor)
+{
+    if (valor <= 1)
     {
-        if(i % 2 == 0){
-            continue;
-        }
-        total += i;
+        return false;
     }
 
-    return total;
+    for (int i = 2; i * i <= valor; i++)
+    {
+        if (valor % i == 0)
+        {
+            return false; 
+        }
+    }
+
+    return true; 
 }

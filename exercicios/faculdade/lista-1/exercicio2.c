@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+// Faça um algoritmo que mostre na tela os k termos da série definida a seguir e, ao 
+// final, mostre o somatório dos termos (o resultado converge pa
 int main()
 {
 
