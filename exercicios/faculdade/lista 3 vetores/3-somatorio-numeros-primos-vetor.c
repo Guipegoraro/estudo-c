@@ -7,8 +7,8 @@ int soma_primos(int v[], int n);
 
 int main(){
 
+    int n = 13;
     int v[] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 0, -7};
-    int n = sizeof(v) / sizeof(v[0]);
 
     for (int i = 0; i < n; i++)
     {
